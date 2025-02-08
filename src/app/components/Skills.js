@@ -2,14 +2,13 @@
 import React, { useEffect, useRef,useState } from "react";
 import Skill from "./Skill";
 import lottie from "lottie-web";
-/*
 import { client } from "../../../developer-portfolio/sanity";
 import { groq } from "next-sanity";
 
 async function getData(){
   return client.fetch(groq`*[_type == "skill"]`);
 }
-*/
+
 function Skills() {
   const skills = [
     {
@@ -96,7 +95,6 @@ function Skills() {
       animationData: animationData,
     });
   }, [animationData]);
-  /*
   const [posts,setPosts] = useState([]);
   useEffect(() => {
     getData()
@@ -107,7 +105,6 @@ function Skills() {
         console.log("error fetching posts", error);
       });
   }, []);
-  */
   return (
     <div className="">
       <h3 className="tracking-[20px] text-center uppercase text-gray-500 text-2xl">
@@ -116,7 +113,7 @@ function Skills() {
 
       <div className="container mx-auto max-w-6xl flex flex-col-reverse md:flex-row items-center justify-between">
         <div className="md:w-1/2 grid grid-cols-3 gap-5">
-          {Skills?.map((item, index) => (
+          {posts?.map((item, index) => (
             <Skill key={index} item={item} />
           ))}
         </div>

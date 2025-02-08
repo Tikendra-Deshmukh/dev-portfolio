@@ -1,12 +1,12 @@
 "use client";
-/*import { groq } from "next-sanity";*/
+import { groq } from "next-sanity";
 import React, { useState, useEffect } from "react";
-/*import { client } from "../../../developer-portfolio/sanity";*/
-/*
+import { client } from "../../../developer-portfolio/sanity";
+
 async function getData() {
   return client.fetch(groq`*[_type == "experience"]`);
 }
-*/
+
 function Experience() {
   const cardsData = [
     {
@@ -44,7 +44,6 @@ function Experience() {
       ],
     },
   ];
-  /*
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     getData()
@@ -54,7 +53,7 @@ function Experience() {
       .catch((error) => {
         console.log("error fetching posts", error);
       });
-  }, []); */
+  }, []);
   return (
     <>
       <h3 className="tracking-[20px] mx-auto text-center mb-10 uppercase text-gray-400 text-2xl">
@@ -62,7 +61,7 @@ function Experience() {
       </h3>
 
       <div className="max-w-6xl mx-auto px-8 lg:px-0 grid grid-cols-1 lg:grid-cols-3 mt-8 mb-20">
-        {cardsData?.map((item, index) => (
+        {posts?.map((item, index) => (
           <div
             className="bg-slate-400 p-6 rounded-lg shadow-md mx-4"
             key={index}

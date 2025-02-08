@@ -6,7 +6,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 function Body() {
   const animationData = require("../../../public/assets/projects.json");
   const [text, count] = useTypewriter({
-    words: ["Hi, My name is Tikendra", "Welcome to My Portfolio", "Explore My journey in:"," Web Development"],
+    words: ["Hi, My name is Sujan", "Learn with me", "I Love to code More"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -26,7 +26,7 @@ function Body() {
         {/* First part */}
         <div className="flex flex-col-reverse justify-between md:flex-row md:space-x-8">
           <div className="w-full flex flex-col  item-start  md:w-2/4 mt-0 md:mt-28">
-            <h1 className="text-3xl lg:text-4xl font-semibold">
+            <h1 className="text-3xl lg:text-5xl font-semibold">
               <span className="mr-3 text-slate-400 ">{text}</span>
               <Cursor />
             </h1>
